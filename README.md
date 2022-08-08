@@ -391,3 +391,15 @@ Todos os IPs dos pods e nodes são roteados sem a utilização de NAT. Isso é s
 
 
 Mais informações em: https://kubernetes.io/docs/concepts/cluster-administration/addons/
+
+### Replace object
+
+```sh
+kubectl replace -f deployment/nginx-limit.yaml
+```
+
+### Edit object
+
+```sh
+kubectl edit service nginx
+```
