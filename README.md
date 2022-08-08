@@ -287,7 +287,7 @@ kubectl run nginx --image nginx --dry-run=client -o yaml
 kubectl run nginx --image nginx --dry-run=client -o yaml > nginx.yml
 ```
 
-### Exportando um pod
+### Exportando um pod (Service)
 
 Com o comando abaixo, o Kubernetes irá criar um service para expor o serviço para a porta declarada no manifesto.
 
@@ -300,6 +300,12 @@ kubectl expose pod nginx
 ClusterIP: IPs validos apenas dentro do Cluster.
 
 NodePort: IPs expostos para internet atraves de IPs dos nodes junto com a porta aleatoria que o Kubernetes gera.
+
+### Endpoint
+
+Sempre que criamos um service, automaticamente é criado um endpoint. O endpoint nada mais é do que o IP do pod que o service irá utilizar, por exemplo, quando criamos um service do tipo ClusterIP temos o seu IP, correto?
+
+Agora, quando batemos nesse IP ele redireciona a conexão para o Pod através desse IP, o EndPoint.
 
 ### Componentes do K8s simplificado
 O k8s tem os seguintes componentes principais:
@@ -385,4 +391,3 @@ Todos os IPs dos pods e nodes são roteados sem a utilização de NAT. Isso é s
 
 
 Mais informações em: https://kubernetes.io/docs/concepts/cluster-administration/addons/
-
