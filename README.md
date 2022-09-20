@@ -403,3 +403,30 @@ kubectl replace -f deployment/nginx-limit.yaml
 ```sh
 kubectl edit service nginx
 ```
+
+### Kubectl taint
+
+```sh
+kubectl describe nodes elliot-01 | grep -i taint
+Taints:             node-role.kubernetes.io/master:NoSchedule
+
+kubectl describe nodes  | grep -i taints
+
+kubectl taint node elliot-01 node-role.kubernetes.io/master:NoSchedule-
+
+kubectl taint node elliot-01 node-role.kubernetes.io/master:NoSchedule
+
+kubectl taint node elliot-02 key1=value1:NoSchedule
+
+kubectl taint node elliot-02 key1=value1:NoSchedule-
+
+kubectl get pods -o wide
+
+kubectl taint node elliot-02 key1=value1:NoExecute-
+
+kubectl taint node elliot-02 key1=value1:NoExecute
+
+kubectl get pods -o wide
+
+kubectl taint node all key1=value1:NoExecute
+```
