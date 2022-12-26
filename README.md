@@ -4,8 +4,6 @@ Repository dedicated to the uncomplicated Kubernetes course by LinuxTips.
 - Documentação oficial: https://kubernetes.io/
 - Livro LinuxTip: https://livro.descomplicandokubernetes.com.br/pt/day_one/descomplicando_kubernetes.html#arquitetura-do-k8s
 
-## Day 1
-
 ### O que é Kubernetes?
 
 Kubernetes é um sistema de orquestração de contêineres open-source que automatiza a implantação, o dimensionamento e a gestão de aplicações em contêineres. Ele foi originalmente projetado pelo Google e agora é mantido pela Cloud Native Computing Foundation
