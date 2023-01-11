@@ -428,3 +428,16 @@ kubectl get pods -o wide
 
 kubectl taint node all key1=value1:NoExecute
 ```
+
+### Volumes
+
+#### emptyDir
+
+Um volume emptyDir é criado pela primeira vez quando um Pod é atribuído a um nó e existe enquanto esse Pod estiver sendo executado nesse nó. Como o nome diz, o volume emptyDir está inicialmente vazio. Todos os contêineres no Pod podem ler e gravar os mesmos arquivos no volume emptyDir, embora esse volume possa ser montado no mesmo caminho ou em caminhos diferentes em cada contêiner. Quando um Pod é removido de um nó por qualquer motivo, os dados no emptyDir são eliminados permanentemente.
+
+#### persistentVolumeClaim
+
+Um volume persistentVolumeClaim é usado para montar um PersistentVolume em um Pod. PersistentVolumeClaims são uma forma de os usuários "solicitarem" armazenamento durável (como um GCE PersistentDisk ou um volume iSCSI) sem conhecerem os detalhes do ambiente de nuvem em particular.
+
+Consulte as informações sobre PersistentVolumes para obter mais detalhes.
+
