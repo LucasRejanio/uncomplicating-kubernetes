@@ -65,6 +65,10 @@ O container runtime é o ambiente de execução de contêineres necessário para
 
 é um objeto responsável por garantir a quantidade de pods em execução no nó;
 
+**DaemonSet:**
+
+DaemonSet é um objeto Kubernetes que garante que uma cópia de um pod definido na configuração esteja sempre disponível em cada nó de trabalho em um cluster. Quando um novo nó é adicionado a um cluster, o DaemonSet aloca automaticamente o pod nesse nó
+
 **Deployment:**
 
 É um dos principais controllers utilizados. O Deployment, em conjunto com o ReplicaSet, garante que determinado número de réplicas de um pod esteja em execução nos nós workers do cluster. Além disso, o Deployment também é responsável por gerenciar o ciclo de vida das aplicações, onde características associadas a aplicação, tais como imagem, porta, volumes e variáveis de ambiente, podem ser especificados em arquivos do tipo yaml ou json para posteriormente serem passados como parâmetro para o kubectl executar o deployment. Esta ação pode ser executada tanto para criação quanto para atualização e remoção do deployment;
