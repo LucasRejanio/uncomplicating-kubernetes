@@ -429,6 +429,10 @@ kubectl get pods -o wide
 kubectl taint node all key1=value1:NoExecute
 ```
 
+### Limits
+
+O Kubernetes define Limits como a quantidade máxima de um recurso a ser usado por um container. Isso significa que o contêiner nunca pode consumir mais do que a quantidade de memória ou CPU indicada. As solicitações, por outro lado, são a quantidade mínima garantida de um recurso reservado para um contêiner.
+
 ### Volumes
 
 #### emptyDir
