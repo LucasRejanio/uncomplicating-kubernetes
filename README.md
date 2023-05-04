@@ -453,3 +453,8 @@ Consulte as informações sobre PersistentVolumes para obter mais detalhes.
 
 No Kubernetes, um CronJob é um tipo de recurso que permite executar tarefas em um horário agendado. Ele é semelhante ao utilitário Unix cron, que permite agendar tarefas para serem executadas em horários ou intervalos específicos.
 
+### Secret e ConfigMap
+
+"Secret" é um objeto que permite armazenar dados confidenciais, como senhas, chaves de API, certificados TLS e outros dados sensíveis. Os Secrets são usados para fornecer um mecanismo seguro para armazenar e distribuir informações confidenciais para os pods em um cluster. Os Secrets podem ser usados em diferentes formatos, como texto simples, Base64 ou arquivos criptografados.
+
+Por sua vez, um "ConfigMap" é um objeto que permite armazenar dados de configuração, como variáveis de ambiente, arquivos de configuração, chaves de API e outros dados não confidenciais. Os ConfigMaps são usados para separar a configuração dos aplicativos de sua imagem de contêiner e permitir que as configurações sejam modificadas sem a necessidade de recriar a imagem do contêiner. Os ConfigMaps também podem ser usados em diferentes formatos, como texto simples ou arquivos.
