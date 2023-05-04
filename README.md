@@ -473,3 +473,15 @@ Verificação da disponibilidade de recursos externos
 O init container é executado em seu próprio espaço de contêiner, mas pode compartilhar volumes com o contêiner principal do pod, permitindo que ele acesse dados ou arquivos necessários para concluir sua tarefa de inicialização. Quando o init container é concluído com êxito, o contêiner principal do pod é iniciado.
 
 Os init containers são uma maneira conveniente de garantir que os pré-requisitos de um aplicativo sejam atendidos antes de iniciar o contêiner principal. Isso pode ajudar a reduzir erros de inicialização e a tornar o ambiente mais previsível e confiável.
+
+# RBAC
+
+RBAC é uma sigla para Role-Based Access Control (Controle de Acesso Baseado em Funções). É um modelo de segurança usado em sistemas de TI que controla o acesso a recursos baseado em papéis ou funções atribuídas a usuários ou grupos.
+
+No contexto do Kubernetes, o RBAC é um mecanismo de segurança que permite definir permissões granulares para usuários e grupos que acessam os recursos do cluster. Isso permite que os administradores de cluster atribuam funções e permissões específicas para diferentes usuários, garantindo que apenas aqueles com permissão possam acessar determinados recursos.
+
+No Kubernetes, as permissões RBAC são definidas em dois objetos principais: Role e RoleBinding. Um Role define as permissões para um conjunto específico de recursos em um determinado namespace, enquanto um RoleBinding associa um Role a um usuário ou grupo específico.
+
+O RBAC é importante para garantir a segurança e o controle de acesso em um ambiente de Kubernetes. Ele permite que os administradores de cluster gerenciem com precisão as permissões de acesso dos usuários, evitando que usuários não autorizados tenham acesso a recursos críticos ou comprometam a segurança do cluster.
+
+Em resumo, o RBAC é um modelo de segurança baseado em funções que permite definir permissões granulares para usuários e grupos que acessam os recursos do cluster Kubernetes. Isso ajuda a garantir a segurança e o controle de acesso em um ambiente de Kubernetes.
