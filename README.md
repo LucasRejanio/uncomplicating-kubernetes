@@ -449,3 +449,7 @@ Um volume persistentVolumeClaim é usado para montar um PersistentVolume em um P
 
 Consulte as informações sobre PersistentVolumes para obter mais detalhes.
 
+### CronJob
+
+No Kubernetes, um CronJob é um tipo de recurso que permite executar tarefas em um horário agendado. Ele é semelhante ao utilitário Unix cron, que permite agendar tarefas para serem executadas em horários ou intervalos específicos.
+
