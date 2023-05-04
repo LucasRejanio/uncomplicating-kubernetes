@@ -458,3 +458,18 @@ No Kubernetes, um CronJob é um tipo de recurso que permite executar tarefas em 
 "Secret" é um objeto que permite armazenar dados confidenciais, como senhas, chaves de API, certificados TLS e outros dados sensíveis. Os Secrets são usados para fornecer um mecanismo seguro para armazenar e distribuir informações confidenciais para os pods em um cluster. Os Secrets podem ser usados em diferentes formatos, como texto simples, Base64 ou arquivos criptografados.
 
 Por sua vez, um "ConfigMap" é um objeto que permite armazenar dados de configuração, como variáveis de ambiente, arquivos de configuração, chaves de API e outros dados não confidenciais. Os ConfigMaps são usados para separar a configuração dos aplicativos de sua imagem de contêiner e permitir que as configurações sejam modificadas sem a necessidade de recriar a imagem do contêiner. Os ConfigMaps também podem ser usados em diferentes formatos, como texto simples ou arquivos.
+
+
+### Init container
+
+init container é um tipo especial de contêiner que é executado antes do contêiner principal de um pod. A principal função de um init container é realizar tarefas de inicialização que precisam ser concluídas antes que o contêiner principal possa ser executado.
+
+Alguns exemplos comuns de tarefas de inicialização incluem:
+
+Inicialização de um banco de dados ou outros recursos de armazenamento de dados
+Configuração de credenciais de autenticação ou autorização
+Realização de tarefas de pré-processamento de dados
+Verificação da disponibilidade de recursos externos
+O init container é executado em seu próprio espaço de contêiner, mas pode compartilhar volumes com o contêiner principal do pod, permitindo que ele acesse dados ou arquivos necessários para concluir sua tarefa de inicialização. Quando o init container é concluído com êxito, o contêiner principal do pod é iniciado.
+
+Os init containers são uma maneira conveniente de garantir que os pré-requisitos de um aplicativo sejam atendidos antes de iniciar o contêiner principal. Isso pode ajudar a reduzir erros de inicialização e a tornar o ambiente mais previsível e confiável.
