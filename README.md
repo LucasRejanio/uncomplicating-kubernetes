@@ -474,7 +474,7 @@ O init container é executado em seu próprio espaço de contêiner, mas pode co
 
 Os init containers são uma maneira conveniente de garantir que os pré-requisitos de um aplicativo sejam atendidos antes de iniciar o contêiner principal. Isso pode ajudar a reduzir erros de inicialização e a tornar o ambiente mais previsível e confiável.
 
-# RBAC
+### RBAC
 
 RBAC é uma sigla para Role-Based Access Control (Controle de Acesso Baseado em Funções). É um modelo de segurança usado em sistemas de TI que controla o acesso a recursos baseado em papéis ou funções atribuídas a usuários ou grupos.
 
@@ -485,3 +485,11 @@ No Kubernetes, as permissões RBAC são definidas em dois objetos principais: Ro
 O RBAC é importante para garantir a segurança e o controle de acesso em um ambiente de Kubernetes. Ele permite que os administradores de cluster gerenciem com precisão as permissões de acesso dos usuários, evitando que usuários não autorizados tenham acesso a recursos críticos ou comprometam a segurança do cluster.
 
 Em resumo, o RBAC é um modelo de segurança baseado em funções que permite definir permissões granulares para usuários e grupos que acessam os recursos do cluster Kubernetes. Isso ajuda a garantir a segurança e o controle de acesso em um ambiente de Kubernetes.
+
+### Ingress
+
+ingress é um objeto que gerencia o acesso externo aos serviços em um cluster. Ele age como um controlador de tráfego que expõe rotas HTTP e HTTPS para serviços dentro do cluster. O ingress geralmente é configurado para redirecionar solicitações com base em regras definidas pelo usuário para serviços específicos, com base em nomes de host e caminhos de URL.
+
+O ingress é usado para rotear o tráfego externo para dentro do cluster e para permitir que os serviços dentro do cluster sejam acessados de fora. O ingress também pode ser configurado para fornecer balanceamento de carga entre vários pods que executam o mesmo serviço.
+
+O ingress é implementado por meio de um controlador de ingress, que pode ser instalado separadamente ou como parte de uma solução de plataforma mais ampla, como o Kubernetes Engine do Google Cloud Platform. Existem vários controladores de ingress disponíveis, cada um com suas próprias configurações e recursos, incluindo o Nginx ingress controller, o Traefik ingress controller e o Istio ingress gateway.
